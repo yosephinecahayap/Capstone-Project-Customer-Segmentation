@@ -155,6 +155,7 @@ Hasil analisis disajikan melalui dashboard interaktif menggunakan Tableau yang m
 | `Customer Segmentation Clustering.ipynb` | Notebook Python berisi proses pengolahan data, eksplorasi, analisis RFM, dan clustering. |
 | `Customer Segmentation Dashboard.twbx` | File dashboard interaktif Tableau. |
 | `ecommerce_dataset_10000.csv` | Dataset yang digunakan dalam proyek. |
+| requirements.txt | Daftar library Python yang dibutuhkan untuk menjalankan proyek. |
 
 ## 11. Cara Menjalankan Proyek
 
@@ -169,7 +170,7 @@ Hasil analisis disajikan melalui dashboard interaktif menggunakan Tableau yang m
 3. Install library Python yang dibutuhkan:
 
    ```bash
-   pip install pandas numpy matplotlib seaborn scikit-learn
+   pip install -r requirements.txt
    ```
 
 4. Buka file `Customer Segmentation Clustering.ipynb` menggunakan Jupyter Notebook atau Google Colab.
