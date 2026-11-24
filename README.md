@@ -49,6 +49,7 @@ Melakukan pemeriksaan struktur dan kualitas data, menangani missing values dan d
 ### 5.2 Exploratory Data Analysis (EDA)
 
 Melakukan eksplorasi data untuk memahami karakteristik bisnis melalui:
+
 - Analisis tren penjualan.
 - Analisis performa produk dan kategori.
 - Analisis pola pembelian pelanggan.
@@ -80,22 +81,32 @@ Membangun dashboard interaktif menggunakan Tableau untuk menyajikan KPI utama, d
 
 Hasil K-Means Clustering menghasilkan empat segmen pelanggan dengan total **4.327 pelanggan**.
 
-| Cluster | Segmen | Jumlah Pelanggan | Karakteristik | Rata-rata CLV |
-|---|---|---:|---|---:|
-| 0 | Mid Loyal | 1.145 | Memiliki frekuensi pembelian tertinggi sebesar 3,63 dan aktivitas transaksi yang relatif konsisten. | 150,4 |
-| 1 | Dormant | 1.143 | Sudah lama tidak bertransaksi dengan recency sebesar 774 hari dan risiko churn tertinggi. | 1,9 |
-| 2 | New / Low Frequency | 1.439 | Segmen terbesar dengan aktivitas pembelian relatif baru, tetapi frekuensi dan nilai transaksi masih rendah. | - |
-| 3 | VIP | 600 | Memiliki rata-rata nilai transaksi tertinggi sebesar 5.349 dan CLV tertinggi. | 359,2 |
+| Cluster | Segmen | Jumlah Pelanggan | Recency (Hari) | Frequency | Monetary | Rata-rata CLV |
+|---|---|---:|---:|---:|---:|---:|
+| 0 | Mid Loyal | 1.145 | 216,55 | 3,63 | 1.730,66 | 150,39 |
+| 1 | Dormant | 1.143 | 774,37 | 1,42 | 894,57 | 1,94 |
+| 2 | New / Low Frequency | 1.439 | 240,54 | 1,59 | 859,83 | 24,41 |
+| 3 | VIP | 600 | 269,80 | 3,21 | 5.348,94 | 359,22 |
+
+### Karakteristik Setiap Segmen
+
+- **Cluster 0 – Mid Loyal:** Memiliki frekuensi pembelian tertinggi sebesar 3,63 dan Monetary sebesar 1.730,66. Segmen ini menunjukkan aktivitas pembelian yang relatif konsisten dengan rata-rata CLV sebesar 150,39.
+
+- **Cluster 1 – Dormant:** Memiliki Recency tertinggi sebesar 774,37 hari, frekuensi pembelian 1,42, dan CLV terendah sebesar 1,94. Segmen ini menunjukkan risiko churn yang paling tinggi.
+
+- **Cluster 2 – New / Low Frequency:** Merupakan segmen terbesar dengan 1.439 pelanggan. Memiliki Recency sebesar 240,54 hari, tetapi frekuensi pembelian masih rendah sebesar 1,59 dan CLV sebesar 24,41.
+
+- **Cluster 3 – VIP:** Memiliki Monetary tertinggi sebesar 5.348,94 dan CLV tertinggi sebesar 359,22. Meskipun jumlah pelanggannya hanya 600, segmen ini memberikan kontribusi nilai pelanggan yang signifikan.
 
 ## 7. Insight Bisnis
 
 Berdasarkan hasil analisis dan segmentasi, diperoleh beberapa insight utama:
 
-1. **Konsentrasi Nilai Pelanggan:** Segmen VIP yang mencakup sekitar 14% pelanggan berkontribusi hampir setengah dari total CLV.
+1. **Konsentrasi Nilai Pelanggan:** Segmen VIP yang mencakup sekitar 14% pelanggan berkontribusi sekitar 50,71% dari total CLV. Hal ini menunjukkan bahwa sebagian besar nilai pelanggan terkonsentrasi pada segmen yang relatif kecil.
 
-2. **Prioritas Retensi Pelanggan:** Segmen VIP dan Mid Loyal secara keseluruhan mencakup sekitar 40% pelanggan dan menyumbang sekitar 90% total CLV. Oleh karena itu, mempertahankan kedua segmen ini menjadi prioritas bisnis.
+2. **Prioritas Retensi Pelanggan:** Segmen VIP dan Mid Loyal secara keseluruhan mencakup sekitar 40% pelanggan dan menyumbang sekitar 91,22% total CLV. Oleh karena itu, mempertahankan kedua segmen ini menjadi prioritas bisnis.
 
-3. **Risiko Churn:** Segmen Dormant memiliki rata-rata recency sebesar 774 hari dan CLV sebesar 1,9, yang menunjukkan penurunan aktivitas transaksi dan tingginya risiko churn.
+3. **Risiko Churn:** Segmen Dormant memiliki rata-rata Recency sebesar 774,37 hari dan CLV sebesar 1,94, yang menunjukkan penurunan aktivitas transaksi dan tingginya risiko churn.
 
 4. **Peluang Konversi:** Segmen New / Low Frequency masih memiliki aktivitas pembelian yang relatif baru sehingga berpotensi dikembangkan menjadi pelanggan dengan frekuensi transaksi lebih tinggi.
 
@@ -115,19 +126,21 @@ Berdasarkan karakteristik setiap segmen, berikut rekomendasi strategi pemasaran 
 Hasil analisis disajikan melalui dashboard interaktif menggunakan Tableau yang menampilkan:
 
 **Key Performance Indicators (KPI):**
+
 - Total Pelanggan: 4.327
 - Jumlah Segmen: 4
 - Rata-rata CLV: 98,24
-- Churn Rate: 67,7%
+- Churn Rate: 67,74%
 
 **Visualisasi Dashboard:**
+
 - Distribusi pelanggan berdasarkan segmen.
 - Scatter plot Recency vs. Monetary.
 - Perbandingan rata-rata metrik RFM pada setiap cluster.
 - Perbandingan CLV antarsegmen.
 - Ringkasan karakteristik dan insight setiap segmen.
 
-**Dashboard Preview**
+### Dashboard Preview
 
 <!-- Tambahkan screenshot dashboard di sini -->
 
